@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* barlow-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/barlow-v12-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/barlow-v12-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Barlow";
+}
+
+.container {
+  width: 252px;
+  margin: 0 auto;
+}
+
+.faqs__form {
+  background: white;
+  padding-top: 26px;
+  padding-bottom: 18px;
+}
+
+.faqs__form-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 23px;
+  padding-left: 27px;
+  position: relative;
+  color: hsl(228, 3%, 29%);
+}
+.faqs__form-title::after {
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  content: "";
+  background-image: url(../../img/icon-top.png);
+  left: 0;
+  top: 1px;
+}
+
+.faqs__form-input {
+  padding: 8px 20px;
+  border: 1px solid hsl(0, 0%, 88%);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 22px;
+}
+.faqs__form-input:focus {
+  outline: none;
+}
+
+.faqs__form-box-container {
+  display: flex;
+}
+
+.faqs__form-box {
+  max-width: 72px;
+  margin-right: 51px;
+}
+
+.faqs__label {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 15px;
+  padding-left: 29px;
+  position: relative;
+}
+.faqs__label::after {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  content: "";
+  border-radius: 3px;
+  left: 0px;
+  top: 0;
+}
+
+.faqs__input:checked + .faqs__label {
+  position: relative;
+}
+.faqs__input:checked + .faqs__label::before {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  content: "✔";
+  border: 2px solid hsl(21, 100%, 60%);
+  color: white;
+  left: 0px;
+  top: 0;
+  background-color: hsl(21, 100%, 60%);
+  border-radius: 3px;
+}
